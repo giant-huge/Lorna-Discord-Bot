@@ -45,6 +45,11 @@ async def ping(ctx):
 
 
 @bot.command()
+async def love(ctx):
+    await ctx.send('I love you! :kiss:')
+
+
+@bot.command()
 async def email(ctx):
     await ctx.send('Andreas Von Dyvor: dyvormusic@gmail.com')
     await ctx.send('Dyvor Records: dyvorrecords@gmail.com')

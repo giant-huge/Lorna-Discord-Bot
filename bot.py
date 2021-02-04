@@ -45,6 +45,11 @@ async def ping(ctx):
 
 
 @bot.command()
+async def lol(ctx):
+    await ctx.send('lmao')
+
+
+@bot.command()
 async def love(ctx):
     await ctx.send('I love you! :kiss:')
 

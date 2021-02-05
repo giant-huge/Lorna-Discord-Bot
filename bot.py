@@ -39,6 +39,14 @@ async def on_message(message):
         await channel.send(message.content)
 
 
+@bot.event
+async def on_message(message):
+    if message.content == 'test':
+        await message.channel.send('Testing 1 2 3')
+    await bot.process_commands(message)
+
+
+
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')

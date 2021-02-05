@@ -26,6 +26,11 @@ def get_weather_api(token: str, city: str):
             return False
 
 
+def find_by_name(obj, name):
+    for item in obj:
+        if item.name == name:
+            return item
+
 @bot.event
 async def on_ready():
     print('Bot is Online!')
@@ -48,13 +53,18 @@ async def on_message(message):
 
 
 @bot.command()
+async def emoji(ctx, name):
+    await ctx.send(str(find_by_name(find_by_name(bot.guilds, 'Dyvor Records').emojis, name)))
+
+
+@bot.command()
 async def ping(ctx):
     await ctx.send('pong')
 
 
 @bot.command()
 async def lol(ctx):
-    await ctx.send('lmao')
+    await ctx.send('lmao?')
 
 
 @bot.command()
@@ -75,7 +85,7 @@ async def youtube(ctx):
 
 
 @bot.command()
-async def hannah(ctx):
+async def contacthannah(ctx):
     await ctx.send('Hannah is from Essex, UK. She is 18 years of age.')
     await ctx.send('Here is her email: hannahstewart2028@gmail.com')
 
@@ -88,6 +98,7 @@ async def instagram(ctx):
 
 @bot.command()
 async def artists(ctx):
+    await ctx.send('Andreas Von Dyvor')
     await ctx.send('JAAMS (previously Jay Alex)')
     await ctx.send('Karen Vegas')
 
@@ -115,7 +126,7 @@ async def latest(ctx):
 async def epic(ctx):
     await ctx.send('F off Bruv, go back to whatever gutter you came from.')
     await ctx.send('Tosser. **spits on ground**')
-    await ctx.send('https://drive.google.com/file/d/1y4NbxP9ekViKPnxdID_rpCH28OWUOoSE/view?usp=sharing')
+    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/screenshot-27.png?w=897')
 
 
 @bot.command()
@@ -127,6 +138,7 @@ async def soundcloud(ctx):
 @bot.command()
 async def miketyson(ctx):
     await ctx.send('**EXPERIENCE THE TOAD** :eye: :frog:')
+    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/mike-tyson.jpg?w=512')
 
 
 @bot.command()
@@ -157,6 +169,7 @@ async def serverinfo(ctx):
 async def covid(ctx):
     await ctx.send('Never Forget to Mask up! :mask:')
     await ctx.send('https://coronavirus.thebaselab.com')
+    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/masks.png?w=318')
 
 
 @bot.command()
@@ -169,6 +182,7 @@ async def info(ctx):
 async def spanish(ctx):
     await ctx.send('Q lo q mani? Y este?!!!')
     await ctx.send('Q hombre, dios mio! :heart_eyes: :kiss: me llamas mas tarde papi :smirk:')
+    await ctx.send('Call me: 0908 145 4754')
 
 
 @bot.command()
@@ -179,7 +193,8 @@ async def UK(ctx):
 @bot.command()
 async def french(ctx):
     await ctx.send('Hannah est française maintenant,')
-    await ctx.send('Achetez-lui un sac Burkin.')
+    await ctx.send('Achetez-lui un sac Burkin, si possible, je voudrais celui-ci:')
+    await ctx.send('https://i.insider.com/5ec717884dca6806e011dd9a?width=700&format=jpeg&auto=webp')
 
 
 @bot.command()
@@ -204,7 +219,7 @@ async def avatar(ctx, *, avamember: discord.Member = None):
 @bot.command()
 async def donna(ctx):
     await ctx.send('@donna#8475')
-    await ctx.send('https://drive.google.com/file/d/1bxXhUDdBcOOythf-s7bFLfbNgY0LsSXA/view?usp=sharing')
+    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/donna-did-not-pick-up.gif?w=320')
 
 
 @bot.command()

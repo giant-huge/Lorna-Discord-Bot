@@ -172,8 +172,7 @@ async def hungry(ctx):
 
 @bot.command()
 async def tiktok(ctx):
-    await ctx.send('Are you serious rn love?')
-    await ctx.send('TikTok?!')
+    await ctx.send('Are you serious rn love? TikTok?!')
     await ctx.send('Nvm, here you go :stuck_out_tongue_winking_eye: : https://nogood.io/wp-content/uploads/2019/09/TikTokFeatureImage-3000x1500.jpg')
 
 

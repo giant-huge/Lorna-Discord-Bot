@@ -114,8 +114,9 @@ async def dyvorrecords(ctx):
 @bot.command()
 async def andreasvondyvor(ctx):
     await ctx.send('The founder and current CEO of Dyvor Records')
-    await ctx.send('Current Discography:')
-    await ctx.send('SPACE (05-17-2019) [Single')
+    await ctx.send('---------------------------------------------------------')
+    await ctx.send('**Current Discography:**')
+    await ctx.send('SPACE (05-17-2019) [Single]')
     await ctx.send('Something (In It) (10-23-2019) [Single]')
     await ctx.send('WTFISHOUSEMUSIC (01-23-2020) [Single]')
     await ctx.send('Papa Putin feat. Andreas Von Dyvor (04-07-2020) [Single]')
@@ -126,14 +127,16 @@ async def andreasvondyvor(ctx):
 @bot.command()
 async def jaams(ctx):
     await ctx.send('JAAMS is a joint project by American label exec Andreas Von Dyvor and Portuguese producer Jay Alex. They have known eachother since late 2017, stay tuned for new releases!')
-    await ctx.send('Current Discography:')
+    await ctx.send('---------------------------------------------------------')
+    await ctx.send('**Current Discography:**')
     await ctx.send('Papa Putin feat. Andreas Von Dyvor (04-07-2020) [Single]')
 
 
 @bot.command()
 async def karenvegas(ctx):
     await ctx.send('Karen Vegas, while her true identity is currently a closely guarded secret by the Dyvor Records team, she is from the EU and she is speculated to be twenty five years of age.')
-    await ctx.send('Current Discography:')
+    await ctx.send('---------------------------------------------------------')
+    await ctx.send('**Current Discography:**')
     await ctx.send('Promises (?) [Single, to be re-released late Q1 2021]')
 
 

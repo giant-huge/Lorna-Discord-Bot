@@ -31,6 +31,7 @@ def find_by_name(obj, name):
         if item.name == name:
             return item
 
+
 @bot.event
 async def on_ready():
     print('Bot is Online!')
@@ -104,17 +105,36 @@ async def artists(ctx):
 
 
 @bot.command()
+async def dyvorrecords(ctx):
+    await ctx.send('Dyvor Records, a label founded with the goal to release top quality music from emerging artists all over the world.')
+    await ctx.send('To date all of the labels releases have over 3 Million streams and over 1 Million downloads.')
+    await ctx.send('To contact the label and Dyvor himself, do ^email')
+
+
+@bot.command()
+async def andreasvondyvor(ctx):
+    await ctx.send('The founder and current CEO of Dyvor Records')
+    await ctx.send('Current Discography:')
+    await ctx.send('SPACE (05-17-2019) [Single')
+    await ctx.send('Something (In It) (10-23-2019) [Single]')
+    await ctx.send('WTFISHOUSEMUSIC (01-23-2020) [Single]')
+    await ctx.send('Papa Putin feat. Andreas Von Dyvor (04-07-2020) [Single]')
+    await ctx.send('Benefits (04-17-2020) [EP, 5 Tracks]')
+
+
+
+@bot.command()
 async def jaams(ctx):
-    await ctx.send(
-        'JAAMS is a joint project by American label exec Andreas Von Dyvor and Portuguese producer Jay Alex. They have known eachother since late 2017, stay tuned for new releases!')
-    await ctx.send('Current Discography: Papa Putin (featuring Andreas Von Dyvor')
+    await ctx.send('JAAMS is a joint project by American label exec Andreas Von Dyvor and Portuguese producer Jay Alex. They have known eachother since late 2017, stay tuned for new releases!')
+    await ctx.send('Current Discography:')
+    await ctx.send('Papa Putin feat. Andreas Von Dyvor (04-07-2020) [Single]')
 
 
 @bot.command()
 async def karenvegas(ctx):
-    await ctx.send(
-        'Karen Vegas, who is she? Her true identity is currently a closely guarded secret by the Dyvor Records team. She is from the EU, and she is estimated to be twenty five years of age.')
-    await ctx.send('Curent Discography: Promises')
+    await ctx.send('Karen Vegas, while her true identity is currently a closely guarded secret by the Dyvor Records team, she is from the EU and she is speculated to be twenty five years of age.')
+    await ctx.send('Current Discography:')
+    await ctx.send('Promises (?) [Single, to be re-released late Q1 2021]')
 
 
 @bot.command()
@@ -149,8 +169,9 @@ async def hungry(ctx):
 
 @bot.command()
 async def tiktok(ctx):
-    await ctx.send('Are you serious rn bruv?')
-    await ctx.send('Nvm, here you go: https://nogood.io/wp-content/uploads/2019/09/TikTokFeatureImage-3000x1500.jpg')
+    await ctx.send('Are you serious rn love?')
+    await ctx.send('TikTok?!')
+    await ctx.send('Nvm, here you go :stuck_out_tongue_winking_eye: : https://nogood.io/wp-content/uploads/2019/09/TikTokFeatureImage-3000x1500.jpg')
 
 
 @bot.command()
@@ -161,13 +182,12 @@ async def emergency(ctx):
 
 @bot.command()
 async def serverinfo(ctx):
-    await ctx.send('You want info?')
     await ctx.send('Dyvor Records: The official discord server of Dyvor Records')
 
 
 @bot.command()
 async def covid(ctx):
-    await ctx.send('Never Forget to Mask up! :mask:')
+    await ctx.send('Never forget your mask! :mask:')
     await ctx.send('https://coronavirus.thebaselab.com')
     await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/masks.png?w=318')
 
@@ -186,22 +206,22 @@ async def spanish(ctx):
 
 
 @bot.command()
-async def UK(ctx):
+async def uk(ctx):
     await ctx.send('UK? Basically :england: (feat.) :scotland: :wales: :northen_ireland_flag_not_found:')
 
 
 @bot.command()
 async def french(ctx):
     await ctx.send('Hannah est française maintenant,')
-    await ctx.send('Achetez-lui un sac Burkin, si possible, je voudrais celui-ci:')
+    await ctx.send('Achetez-lui un sac Burkin, si possible je voudrais celui-ci:')
     await ctx.send('https://i.insider.com/5ec717884dca6806e011dd9a?width=700&format=jpeg&auto=webp')
 
 
 @bot.command()
 async def lgbt(ctx):
-    await ctx.send('You forgot QIA+ mate.')
-    await ctx.send('extra letters will be added en el proximo patch, cest bien mon ami?')
-    await ctx.send('I think you broke my language codex, если ты идиот скажи да')
+    await ctx.send('You forgot QIA+.')
+    await ctx.send('Any extra letters will be added en el proximo patch, cest bien mon ami?')
+    await ctx.send('I think you broke my language codex, если ты идиот скажи да?')
 
 
 @bot.command()
@@ -225,18 +245,19 @@ async def donna(ctx):
 @bot.command()
 async def naw(ctx):
     await ctx.send('I literally do not need your opinion')
-    await ctx.send('https://drive.google.com/file/d/1NaBwdvM5qP0hr-gSUMn7ejH-T3Ow3llw/view?usp=sharing')
+    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/naw-reaction.jpg?w=828')
 
 
 @bot.command()
 async def smash(ctx):
-    await ctx.send(
-        ':love_letter: say less: https://drive.google.com/file/d/1EEj6YCTw9uTQlzcTVv2PYRiTccown35J/view?usp=sharing')
+    await ctx.send(':love_letter: Come here!')
+    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/smash-hannah.jpeg?w=1024')
 
 
 @bot.command()
 async def sing(ctx):
-    await ctx.send('Mang I got you: https://drive.google.com/file/d/13voSmZvwiqJoOGlulDZO9biwC3mJf207/view?usp=sharing')
+    await ctx.send('I tried:')
+    await ctx.send('https://drive.google.com/file/d/13voSmZvwiqJoOGlulDZO9biwC3mJf207/view?usp=sharing')
 
 
 @bot.command()
@@ -250,7 +271,7 @@ async def calc(ctx, expression: str):
         x = eval(expression)
         await ctx.send(str(x))
     except ArithmeticError:
-        await ctx.send('that is a not valid expression')
+        await ctx.send('that is a not valid expression my love.')
 
 
 if __name__ == '__main__':

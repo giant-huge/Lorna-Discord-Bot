@@ -1,5 +1,7 @@
+import ffmpeg as ffmpeg
 import discord
 from discord.ext import commands
+import youtube_dl
 
 import os
 import requests
@@ -55,6 +57,60 @@ async def on_message(message):
         await message.channel.send('I am here my liege, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
     await bot.process_commands(message)
+
+
+@bot.command()
+async def play(ctx, url : str):
+    song_there = os.path.isfile('song.mp3')
+    try:
+        if song_there:
+            os.remove('song.mp3')
+    except PermissionError:
+        await ctx.send("Wait for the music to stop please and if your in such a rush use the ^stop command.")
+        return
+
+    voiceChannel = discord.utils.get(ctx.guild.voice_channels, name='Music Bot VC')
+    await voiceChannel.connect()
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+
+
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        "postprocessors": [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }]
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+    for file in os.listdir('./'):
+        if file.endswith('.mp3'):
+            os.rename(file, 'song.mp3')
+    voice.play(discord, ffmpeg('song.mp3')
+
+@bot.command()
+async def leave(ctx):
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+    if voice.is_connected():
+        await voice.disconnect()
+    else:
+        await ctx.send('I am not connected to the voice channel love, try the ^join command')
+
+
+@bot.command()
+async def pause(ctx):
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+    if voice.is_playing():
+        voice.pause()
+    else:
+        await ctx.send('No audio is playing love, are you alright? :ms_hannah_paint: ')
+
+
+@bot.command()
+async def stop(ctx):
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+    voice.stop()
 
 
 @bot.command()

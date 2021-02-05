@@ -34,6 +34,8 @@ def find_by_name(obj, name):
             return item
 
 
+
+
 @bot.event
 async def on_ready():
     print('Bot is Online!')

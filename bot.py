@@ -41,10 +41,10 @@ async def on_message(message):
 
 @bot.event
 async def on_message(message):
-    if message.content == 'test':
-        await message.channel.send('Testing 1 2 3')
+    if message.content == 'hannah':
+        await message.channel.send('I am here my liege, what you do need assistance with?')
+        await message.channel.send('Do ^help for a list of commands.')
     await bot.process_commands(message)
-
 
 
 @bot.command()

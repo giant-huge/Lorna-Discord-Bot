@@ -5,8 +5,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-
-
 load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
@@ -53,8 +51,6 @@ async def on_message(message):
         await message.channel.send('I am here my liege, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
     await bot.process_commands(message)
-
-
 
 
 @bot.command()
@@ -110,7 +106,8 @@ async def artists(ctx):
 
 @bot.command()
 async def dyvorrecords(ctx):
-    await ctx.send('Dyvor Records, a label founded with the goal to release top quality music from emerging artists all over the world.')
+    await ctx.send(
+        'Dyvor Records, a label founded with the goal to release top quality music from emerging artists all over the world.')
     await ctx.send('To date all of the labels releases have over 3 Million streams and over 1 Million downloads.')
     await ctx.send('To contact the label and Dyvor himself, do ^email')
 
@@ -127,10 +124,10 @@ async def andreasvondyvor(ctx):
     await ctx.send('Benefits (04-17-2020) [EP, 5 Tracks]')
 
 
-
 @bot.command()
 async def jaams(ctx):
-    await ctx.send('JAAMS is a joint project by American label exec Andreas Von Dyvor and Portuguese producer Jay Alex. They have known eachother since late 2017, stay tuned for new releases!')
+    await ctx.send(
+        'JAAMS is a joint project by American label exec Andreas Von Dyvor and Portuguese producer Jay Alex. They have known eachother since late 2017, stay tuned for new releases!')
     await ctx.send('---------------------------------------------------------')
     await ctx.send('**Current Discography:**')
     await ctx.send('Papa Putin feat. Andreas Von Dyvor (04-07-2020) [Single]')
@@ -138,7 +135,8 @@ async def jaams(ctx):
 
 @bot.command()
 async def karenvegas(ctx):
-    await ctx.send('Karen Vegas, while her true identity is currently a closely guarded secret by the Dyvor Records team, she is from the EU and she is speculated to be twenty five years of age.')
+    await ctx.send(
+        'Karen Vegas, while her true identity is currently a closely guarded secret by the Dyvor Records team, she is from the EU and she is speculated to be twenty five years of age.')
     await ctx.send('---------------------------------------------------------')
     await ctx.send('**Current Discography:**')
     await ctx.send('Promises (?) [Single, to be re-released late Q1 2021]')
@@ -177,7 +175,8 @@ async def hungry(ctx):
 @bot.command()
 async def tiktok(ctx):
     await ctx.send('Are you serious rn love? TikTok?!')
-    await ctx.send('Nvm, here you go :stuck_out_tongue_winking_eye: : https://nogood.io/wp-content/uploads/2019/09/TikTokFeatureImage-3000x1500.jpg')
+    await ctx.send(
+        'Nvm, here you go :stuck_out_tongue_winking_eye: : https://nogood.io/wp-content/uploads/2019/09/TikTokFeatureImage-3000x1500.jpg')
 
 
 @bot.command()

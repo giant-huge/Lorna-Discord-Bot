@@ -5,6 +5,7 @@ import os
 import requests
 from dotenv import load_dotenv
 
+
 load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
@@ -55,6 +56,7 @@ async def on_message(message):
         await message.channel.send('I am here my liege, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
     await bot.process_commands(message)
+
 
 @bot.command()
 async def emoji(ctx, name):
@@ -167,6 +169,10 @@ async def soundcloud(ctx):
 async def miketyson(ctx):
     await ctx.send('**EXPERIENCE THE TOAD** :eye: :frog:')
     await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/mike-tyson.jpg?w=512')
+
+@bot.command()
+async def invite(ctx):
+    await ctx.send('https://discord.gg/asPGWf3PH3')
 
 
 @bot.command()

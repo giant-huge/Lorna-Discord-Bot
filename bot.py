@@ -5,7 +5,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-
 load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
@@ -33,8 +32,6 @@ def find_by_name(obj, name):
     for item in obj:
         if item.name == name:
             return item
-
-
 
 
 @bot.event
@@ -169,6 +166,7 @@ async def soundcloud(ctx):
 async def miketyson(ctx):
     await ctx.send('**EXPERIENCE THE TOAD** :eye: :frog:')
     await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/mike-tyson.jpg?w=512')
+
 
 @bot.command()
 async def invite(ctx):

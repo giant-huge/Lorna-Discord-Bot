@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
-WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
 
 bot = commands.Bot(command_prefix='^')
 

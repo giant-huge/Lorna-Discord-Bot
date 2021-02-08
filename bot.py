@@ -13,9 +13,9 @@ bot = commands.Bot(command_prefix='^')
 
 server_id = 799333787388739654
 channel_id = 802340305118429249
+client_id = 808432777817096222
 
 client = discord.Client()
-
 
 def get_weather_api(token: str, city: str):
     with requests.get(

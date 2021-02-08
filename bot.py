@@ -5,10 +5,8 @@ import os
 import requests
 from dotenv import load_dotenv
 
-
 load_dotenv()
-cunt = os.getenv('DISCORD_TOKEN')
-WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
+TOKEN = os.getenv('token')
 
 bot = commands.Bot(command_prefix='^')
 
@@ -16,8 +14,6 @@ server_id = 799333787388739654
 channel_id = 802340305118429249
 
 client = discord.Client()
-
-DISCORD_TOKEN = 'ODA4NDMyNzc3ODE3MDk2MjIy.YCGdsg.GPdtBWFE4cA0_hdueUYunBiABhQ'
 
 
 def get_weather_api(token: str, city: str):
@@ -290,4 +286,4 @@ async def calc(ctx, expression: str):
 
 
 if __name__ == '__main__':
-    bot.run(DISCORD_TOKEN)
+    bot.run('ODA4NDMyNzc3ODE3MDk2MjIy.YCGdsg.rY7ph2dD3PYUweg451Coc8-Vsws')

@@ -6,7 +6,7 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN)
 WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
 
 bot = commands.Bot(command_prefix='^')
@@ -287,4 +287,4 @@ async def calc(ctx, expression: str):
 
 
 if __name__ == '__main__':
-    bot.run(DISCORD_TOKEN)
+    bot.run('DISCORD_TOKEN')

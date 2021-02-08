@@ -52,12 +52,27 @@ async def on_message(message):
     if message.content == 'hannah':
         await message.channel.send('I am here my liege, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
+    await bot.process_commands(message)
+
+
+@bot.event
+async def on_message(message):
     if message.content == 'Hannah':
         await message.channel.send('I am here my liege, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
+    await bot.process_commands(message)
+
+
+@bot.event
+async def on_message(message):
     if message.content == 'HaNnAh':
         await message.channel.send('I am here my liege, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
+    await bot.process_commands(message)
+
+
+@bot.event
+async def on_message(message):
     if message.content == 'hAnNaH':
         await message.channel.send('I am here my liege, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
@@ -75,12 +90,27 @@ async def on_message(message):
 async def on_message(message):
     if message.content == 'lol':
         await message.channel.send('lmao')
+    await bot.process_commands(message)
+
+
+@bot.event
+async def on_message(message):
     if message.content == 'LOL':
         await message.channel.send['lmao']
+    await bot.process_commands(message)
+
+
+@bot.event
+async def on_message(message):
     if message.content == 'lOl':
         await message.channel.send['lmao']
-        if message.content == 'LoL':
-            await message.channel.send['lmao']
+    await bot.process_commands(message)
+
+
+@bot.event
+async def on_message(message):
+    if message.content == 'LoL':
+        await message.channel.send['lmao']
     await bot.process_commands(message)
 
 

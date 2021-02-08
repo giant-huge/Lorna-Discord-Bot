@@ -55,6 +55,13 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
+@bot.event
+async def on_message(message):
+    if message.content == 'gay':
+        await message.channel.send('I am here my queen, do ^lgbt for a joke.')
+    await bot.process_commands(message)
+
+
 @bot.command()
 async def emoji(ctx, name):
     await ctx.send(str(find_by_name(find_by_name(bot.guilds, 'Dyvor Records').emojis, name)))

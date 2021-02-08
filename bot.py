@@ -5,9 +5,7 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
-WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
+DISCORD_TOKEN = ('ODA3MDMwMTE1ODc1MDI5MDQz.YByDXQ.70dQLX80VtWrhVNIFVIs-LDbqsc')
 
 bot = commands.Bot(command_prefix='^')
 

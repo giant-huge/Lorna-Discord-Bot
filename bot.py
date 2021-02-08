@@ -287,4 +287,4 @@ async def calc(ctx, expression: str):
 
 
 if __name__ == '__main__':
-    bot.run(DISCORD_TOKEN)
+    client.run(DISCORD_TOKEN)

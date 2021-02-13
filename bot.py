@@ -5,10 +5,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
-WEATHER_TOKEN = os.getenv('WEATHER_TOKEN')
-
 bot = commands.Bot(command_prefix='^')
 
 server_id = 799333787388739654
@@ -288,4 +284,4 @@ async def calc(ctx, expression: str):
 
 
 if __name__ == '__main__':
-    bot.run('DISCORD_TOKEN')
+    bot.run('ODA5ODgzNjg5NDcwOTE4NjY2.YCbk9g.OngsIQ_2a0qZtMv3Aa61UlRrhfs')

@@ -55,6 +55,8 @@ async def eclipse(ctx):
     await ctx.send('Yeah they have a Hannah, join here: https://discord.gg/T7Pu6cqnh9')
 
 
+
+
 @bot.command()
 async def emoji(ctx, name):
     await ctx.send(str(find_by_name(find_by_name(bot.guilds, 'Dyvor Records').emojis, name)))

@@ -31,7 +31,7 @@ def find_by_name(obj, name):
 
 @bot.event
 async def on_ready():
-    print('Hannah Bot is ready for deployment!')
+    print('Hannah (the assistant) Bot is ready for deployment!')
 
 
 @bot.event
@@ -44,7 +44,7 @@ async def on_message(message):
 
 @bot.event
 async def on_message(message):
-    if message.content == 'bot':
+    if message.content == 'assistant':
         await message.channel.send('I am here, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
     await bot.process_commands(message)

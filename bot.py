@@ -31,7 +31,7 @@ def find_by_name(obj, name):
 
 @bot.event
 async def on_ready():
-    print('Hannah (the assistant) Bot is ready for deployment!')
+    print('Hannah (the assistant) Bot is ready for deployment!!!')
 
 
 @bot.event

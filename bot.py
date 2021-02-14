@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='^')
 
 server_id = 799333787388739654
 channel_id = 802340305118429249
-client_id = 808432777817096222
+client_id = 809883689470918666
 
 client = discord.Client()
 

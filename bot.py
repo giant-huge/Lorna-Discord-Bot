@@ -91,6 +91,9 @@ async def youtube(ctx):
 async def contactbot(ctx):
     await ctx.send('You cannot contact me, I am not real.')
 
+@bot.command()
+async def contactbot(ctx):
+    await ctx.send('You cannot contact me, I am not real.')
 
 @bot.command()
 async def instagram(ctx):

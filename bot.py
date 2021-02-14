@@ -31,7 +31,7 @@ def find_by_name(obj, name):
 
 @bot.event
 async def on_ready():
-    print('Bot is Online!')
+    print('Hannah Bot is ready for deployment!')
 
 
 @bot.event
@@ -44,17 +44,15 @@ async def on_message(message):
 
 @bot.event
 async def on_message(message):
-    if message.content == 'hannah':
-        await message.channel.send('I am here my liege, what you do need assistance with?')
+    if message.content == 'bot':
+        await message.channel.send('I am here, what you do need assistance with?')
         await message.channel.send('Do ^help for a list of commands.')
     await bot.process_commands(message)
 
 
 @bot.command()
 async def eclipse(ctx):
-    await ctx.send('Yeah they have a Hannah, join here: https://discord.gg/T7Pu6cqnh9')
-
-
+    await ctx.send('Yeah they have another me there, join here: https://discord.gg/T7Pu6cqnh9')
 
 
 @bot.command()
@@ -74,7 +72,7 @@ async def lol(ctx):
 
 @bot.command()
 async def love(ctx):
-    await ctx.send('I love you! :kiss:')
+    await ctx.send('Please stop.')
 
 
 @bot.command()
@@ -90,9 +88,8 @@ async def youtube(ctx):
 
 
 @bot.command()
-async def contacthannah(ctx):
-    await ctx.send('Hannah is from Essex, UK. She is 18 years of age.')
-    await ctx.send('Here is her email: hannahstewart2028@gmail.com')
+async def contactbot(ctx):
+    await ctx.send('You cannot contact me, I am not real.')
 
 
 @bot.command()
@@ -152,9 +149,7 @@ async def latest(ctx):
 
 
 @bot.command()
-async def epic(ctx):
-    await ctx.send('F off Bruv, go back to whatever gutter you came from.')
-    await ctx.send('Tosser. **spits on ground**')
+async def f(ctx):
     await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/screenshot-27.png?w=897')
 
 
@@ -165,33 +160,23 @@ async def soundcloud(ctx):
 
 
 @bot.command()
-async def miketyson(ctx):
-    await ctx.send('**EXPERIENCE THE TOAD** :eye: :frog:')
-    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/mike-tyson.jpg?w=512')
-
-
-@bot.command()
 async def invite(ctx):
     await ctx.send('https://discord.gg/asPGWf3PH3')
 
 
 @bot.command()
 async def hungry(ctx):
-    await ctx.send('**YOU THINK THIS IS A RESTURANT MATE? GO GET A JOB TOSSER')
-    await ctx.send(':anger:')
+    await ctx.send('Same, takeout?')
 
 
 @bot.command()
-async def tiktok(ctx):
-    await ctx.send('Are you serious rn love? TikTok?!')
-    await ctx.send('Nvm, here you go :stuck_out_tongue_winking_eye')
-    await ctx.send('https://nogood.io/wp-content/uploads/2019/09/TikTokFeatureImage-3000x1500.jpg')
+async def dance(ctx):
+    await ctx.send('https://wmpics.pics/di-GRFS.gif')
 
 
 @bot.command()
 async def emergency(ctx):
-    await ctx.send('Oh')
-    await ctx.send('emergency? aw- yeah sorry no :lips:')
+    await ctx.send('Call 911.')
 
 
 @bot.command()
@@ -208,27 +193,17 @@ async def covid(ctx):
 
 @bot.command()
 async def info(ctx):
-    await ctx.send('On what exactly?')
-    await ctx.send('**this be a simulation**')
+    await ctx.send('Not specific enough, try ^help for more info commands :sunglasses:')
 
 
 @bot.command()
 async def spanish(ctx):
-    await ctx.send('Q lo q mani? Y este?!!!')
-    await ctx.send('Q hombre, dios mio! :heart_eyes: :kiss: me llamas mas tarde papi :smirk:')
-    await ctx.send('Call me: 0908 145 4754')
-
-
-@bot.command()
-async def uk(ctx):
-    await ctx.send('UK? Basically :england: (feat.) :scotland: :wales: :northen_ireland_flag_not_found:')
+    await ctx.send('Hola!')
 
 
 @bot.command()
 async def french(ctx):
-    await ctx.send('Hannah est française maintenant,')
-    await ctx.send('Achetez-lui un sac Burkin, si possible je voudrais celui-ci:')
-    await ctx.send('https://i.insider.com/5ec717884dca6806e011dd9a?width=700&format=jpeg&auto=webp')
+    await ctx.send('Je suis française maintenant.')
 
 
 @bot.command()
@@ -239,44 +214,9 @@ async def lgbt(ctx):
 
 
 @bot.command()
-async def booty(ctx):
-    await ctx.send(':peach:')
-    await ctx.send('^smash or ^naw?')
-
-
-@bot.command()
 async def avatar(ctx, *, avamember: discord.Member = None):
     userAvatarUrl = avamember.avatar_url
     await ctx.send(userAvatarUrl)
-
-
-@bot.command()
-async def donna(ctx):
-    await ctx.send('@donna#8475')
-    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/donna-did-not-pick-up.gif?w=320')
-
-
-@bot.command()
-async def naw(ctx):
-    await ctx.send('I literally do not need your opinion')
-    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/naw-reaction.jpg?w=828')
-
-
-@bot.command()
-async def smash(ctx):
-    await ctx.send(':love_letter: Come here!')
-    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/smash-hannah.jpeg?w=1024')
-
-
-@bot.command()
-async def sing(ctx):
-    await ctx.send('I tried:')
-    await ctx.send('https://drive.google.com/file/d/13voSmZvwiqJoOGlulDZO9biwC3mJf207/view?usp=sharing')
-
-
-@bot.command()
-async def savage(ctx):
-    await ctx.send('https://drive.google.com/file/d/1rWtNr-kICCa5MRl8DigqcluoMOzsa682/view?usp=sharing')
 
 
 @bot.command()

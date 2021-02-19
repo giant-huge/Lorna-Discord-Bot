@@ -31,6 +31,7 @@ def find_by_name(obj, name):
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(activity=discord.Game(name="^help"))
     print('Hannah (the assistant) Bot is ready for deployment!!!')
 
 
@@ -50,6 +51,19 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
+@bot.event
+async def on_message(message):
+    if message.content == 'god':
+        await message.channel.send('**I LOVE DYVOR! HE LITERALLY CREATED ME.**')
+    await bot.process_commands(message)
+
+
+@bot.command()
+async def ride(ctx):
+    await ctx.send(":bull_ride:")
+    await ctx.send("It's time to ride!")
+
+
 @bot.command()
 async def eclipse(ctx):
     await ctx.send('Yeah they have another me there, join here: https://discord.gg/T7Pu6cqnh9')
@@ -62,7 +76,7 @@ async def emoji(ctx, name):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('pong')
+    await ctx.send(f'Assistant Bot Latency is currently: {bot.latency}')
 
 
 @bot.command()
@@ -106,7 +120,7 @@ async def artists(ctx):
 
 
 @bot.command()
-async def dyvorrecords(ctx):
+async def labelinfo(ctx):
     await ctx.send('Dyvor Records, a label founded with the goal to release top quality music from emerging artists,')
     await ctx.send('all over the world.')
     await ctx.send('To date all of the labels releases have over 3 Million streams and over 1 Million downloads.')
@@ -149,7 +163,16 @@ async def latest(ctx):
 
 
 @bot.command()
+async def smoke(ctx):
+    # This code will say "Hi, @username!"
+    # this uses an 'f' befoe a string so I can input the username
+    # ctx has many propertys, including .send .author and .content (there are more)
+    await ctx.send(f"Join {ctx.author.mention} for a smoke break.")
+
+
+@bot.command()
 async def f(ctx):
+    await ctx.send(f'No, Fuck You {ctx.author.mention}')
     await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/screenshot-27.png?w=897')
 
 

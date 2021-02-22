@@ -60,7 +60,7 @@ async def on_message(message):
 @bot.event
 async def on_message(message, ctx):
     if message.content == 'sex':
-        await message.channel.send(f'I know {ctx.author.mention} it''s very hard these days.')
+        await message.channel.send(f'Please stop. {ctx.author.mention}')
     await bot.process_commands(message)
 
 @bot.event
@@ -200,7 +200,7 @@ async def invite(ctx):
 
 @bot.command()
 async def hungry(ctx):
-    await ctx.send('You know I can''t eat right?')
+    await ctx.send('You know I cannot eat right?')
 
 
 @bot.command()

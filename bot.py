@@ -46,8 +46,7 @@ async def on_message(message):
 @bot.event
 async def on_message(message):
     if message.content == 'assistant':
-        await message.channel.send('I am here, what you do need assistance with?')
-        await message.channel.send('Do ^help for a list of commands.')
+        await message.channel.send('Hello! Welcome to Dyvor Records. What you do need ^help with?')
     await bot.process_commands(message)
 
 
@@ -58,15 +57,22 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
+@bot.event
+async def on_message(message, ctx):
+    if message.content == 'sex':
+        await message.channel.send(f'I know {ctx.author.mention} it''s very hard these days.')
+    await bot.process_commands(message)
+
+@bot.event
+async def on_message(message, ctx):
+    if message.content == 'f':
+        await message.channel.send(f'Fuck You {ctx.author.mention}')
+    await bot.process_commands(message)
+
+
 @bot.command()
 async def ride(ctx):
-    await ctx.send(":bull_ride:")
-    await ctx.send("It's time to ride!")
-
-
-@bot.command()
-async def eclipse(ctx):
-    await ctx.send('Yeah they have another me there, join here: https://discord.gg/T7Pu6cqnh9')
+    await ctx.send("It's time to ride... you're not recording, right?")
 
 
 @bot.command()
@@ -114,13 +120,16 @@ async def instagram(ctx):
 
 @bot.command()
 async def artists(ctx):
+    await ctx.send('In chronological order.')
+    await ctx.send('---------------------------------------------------------')
     await ctx.send('Andreas Von Dyvor')
     await ctx.send('JAAMS (previously Jay Alex)')
     await ctx.send('Karen Vegas')
+    await ctx.send('Jausla')
 
 
 @bot.command()
-async def labelinfo(ctx):
+async def label(ctx):
     await ctx.send('Dyvor Records, a label founded with the goal to release top quality music from emerging artists,')
     await ctx.send('all over the world.')
     await ctx.send('To date all of the labels releases have over 3 Million streams and over 1 Million downloads.')
@@ -158,22 +167,24 @@ async def karenvegas(ctx):
 
 
 @bot.command()
+async def jausla(ctx):
+    await ctx.send('Jausla. Jausla?')
+    await ctx.send('---------------------------------------------------------')
+    await ctx.send('**Current Discography:**')
+    await ctx.send('Not available.')
+
+
+@bot.command()
 async def latest(ctx):
     await ctx.send('https://ffm.to/avd-benefits-ep')
 
 
 @bot.command()
-async def smoke(ctx):
+async def rave(ctx):
     # This code will say "Hi, @username!"
     # this uses an 'f' befoe a string so I can input the username
     # ctx has many propertys, including .send .author and .content (there are more)
-    await ctx.send(f"Join {ctx.author.mention} for a smoke break.")
-
-
-@bot.command()
-async def f(ctx):
-    await ctx.send(f'No, Fuck You {ctx.author.mention}')
-    await ctx.send('https://mshannahbotassets.files.wordpress.com/2021/02/screenshot-27.png?w=897')
+    await ctx.send(f"Join {ctx.author.mention} for an impromptu rave!")
 
 
 @bot.command()
@@ -189,22 +200,22 @@ async def invite(ctx):
 
 @bot.command()
 async def hungry(ctx):
-    await ctx.send('Same, takeout?')
+    await ctx.send('You know I can''t eat right?')
 
 
 @bot.command()
 async def dance(ctx):
-    await ctx.send('https://wmpics.pics/di-GRFS.gif')
+    await ctx.send('https://media.tenor.com/images/0f35f4424cd82fcd83a4d43c745424cf/tenor.gif')
 
 
 @bot.command()
 async def emergency(ctx):
-    await ctx.send('Call 911.')
+    await ctx.send('**C a l l  9 1 1**')
 
 
 @bot.command()
 async def serverinfo(ctx):
-    await ctx.send('Dyvor Records: The official discord server of Dyvor Records')
+    await ctx.send('The official discord server of Dyvor Records.')
 
 
 @bot.command()
@@ -215,25 +226,18 @@ async def covid(ctx):
 
 
 @bot.command()
-async def info(ctx):
-    await ctx.send('Not specific enough, try ^help for more info commands :sunglasses:')
-
-
-@bot.command()
 async def spanish(ctx):
-    await ctx.send('Hola!')
+    await ctx.send('No mas.')
 
 
 @bot.command()
 async def french(ctx):
-    await ctx.send('Je suis française maintenant.')
+    await ctx.send('Je ne suis française.')
 
 
 @bot.command()
 async def lgbt(ctx):
-    await ctx.send('You forgot QIA+.')
-    await ctx.send('Any extra letters will be added en el proximo patch, cest bien mon ami?')
-    await ctx.send('I think you broke my language codex, если ты идиот скажи да?')
+    await ctx.send('если ты идиот скажи.')
 
 
 @bot.command()
@@ -248,7 +252,7 @@ async def calc(ctx, expression: str):
         x = eval(expression)
         await ctx.send(str(x))
     except ArithmeticError:
-        await ctx.send('that is a not valid expression my love.')
+        await ctx.send('I literally cannot.')
 
 
 if __name__ == '__main__':

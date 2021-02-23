@@ -32,7 +32,7 @@ def find_by_name(obj, name):
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name="^help"))
-    print('Hannah (the assistant) Bot is ready for deployment!!!')
+    print('Assistant Bot v3009 is ready for deployment!!!')
 
 
 @bot.event
@@ -46,27 +46,13 @@ async def on_message(message):
 @bot.event
 async def on_message(message):
     if message.content == 'assistant':
-        await message.channel.send('Hello! Welcome to Dyvor Records. What you do need ^help with?')
-    await bot.process_commands(message)
-
-
-@bot.event
-async def on_message(message):
+        await message.channel.send(f'Hello! Welcome to Dyvor Records. What you do need ^help with?')
     if message.content == 'god':
-        await message.channel.send('**I LOVE DYVOR! HE LITERALLY CREATED ME.**')
-    await bot.process_commands(message)
-
-
-@bot.event
-async def on_message(message, ctx):
-    if message.content == 'sex':
-        await message.channel.send(f'Please stop. {ctx.author.mention}')
-    await bot.process_commands(message)
-
-@bot.event
-async def on_message(message, ctx):
+        await message.channel.send(f'**I LOVE DYVOR! HE LITERALLY CREATED ME.**')
     if message.content == 'f':
-        await message.channel.send(f'Fuck You {ctx.author.mention}')
+        await message.channel.send(f'Fuck You.')
+    if message.content == 'sex':
+        await message.channel.send(f'No thank you.')
     await bot.process_commands(message)
 
 
@@ -129,7 +115,7 @@ async def artists(ctx):
 
 
 @bot.command()
-async def label(ctx):
+async def labelinfo(ctx):
     await ctx.send('Dyvor Records, a label founded with the goal to release top quality music from emerging artists,')
     await ctx.send('all over the world.')
     await ctx.send('To date all of the labels releases have over 3 Million streams and over 1 Million downloads.')
@@ -256,4 +242,4 @@ async def calc(ctx, expression: str):
 
 
 if __name__ == '__main__':
-    bot.run('ODA5ODgzNjg5NDcwOTE4NjY2.YCbk9g.OngsIQ_2a0qZtMv3Aa61UlRrhfs')
+    bot.run('ODA5ODgzNjg5NDcwOTE4NjY2.YCbk9g.SYwHhy-KD19mqBQpxs8_p4lrhfQ')

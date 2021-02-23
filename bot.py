@@ -31,7 +31,7 @@ def find_by_name(obj, name):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(name="^help"))
+    await bot.change_presence(activity=discord.Game(name="^help, type assistant"))
     print('Assistant v6 has returned from her lunch break.')
 
 

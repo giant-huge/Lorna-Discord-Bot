@@ -55,6 +55,8 @@ async def on_message(message):
         await message.channel.send(f'No thank you.')
     if message.content == 'drugs':
         await message.channel.send(f'Sorry no.')
+    if message.content == 'minecraft':
+        await message.channel.send(f'Are you 5?')
     await bot.process_commands(message)
 
 

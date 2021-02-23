@@ -53,6 +53,8 @@ async def on_message(message):
         await message.channel.send(f'Fuck You.')
     if message.content == 'sex':
         await message.channel.send(f'No thank you.')
+    if message.content == 'drugs':
+        await message.channel.send(f'Sorry no.')
     await bot.process_commands(message)
 
 

@@ -32,7 +32,7 @@ def find_by_name(obj, name):
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name="^help, type assistant"))
-    print('Assistant v6 has returned from her lunch break.')
+    print('Assistant v6.30113 has returned from her lunch break.')
 
 
 @bot.event
@@ -57,6 +57,38 @@ async def on_message(message):
         await message.channel.send(f'Sorry no.')
     if message.content == 'minecraft':
         await message.channel.send(f'Are you 5?')
+    if message.content == 'latest':
+        await message.channel.send(f'https://ffm.to/avd-benefits-ep')
+    if message.content == 'gay':
+        await message.channel.send(f'No you.')
+    if message.content == 'yo':
+        await message.channel.send(f'What up?')
+    if message.content == 'ty':
+        await message.channel.send(f'Your Welcome.')
+    if message.content == 'boi':
+        await message.channel.send(f'Please use Sir.')
+    if message.content == 'girl':
+        await message.channel.send(f'Please use Madam.')
+    if message.content == 'gurl':
+        await message.channel.send(f'Please use Madam.')
+    if message.content == 'sir':
+        await message.channel.send(f'Good lad.')
+    if message.content == 'madam':
+        await message.channel.send(f'Good lass.')
+    if message.content == 'who':
+        await message.channel.send(f'Probably not me.')
+    if message.content == 'sup':
+        await message.channel.send(f'Heya')
+    if message.content == 'Heya':
+        await message.channel.send(f':wink:')
+    if message.content == 'cringe':
+        await message.channel.send(f'Very much so.')
+    if message.content == 'trash':
+        await message.channel.send(f':fire:')
+    if message.content == 'dyvor':
+        await message.channel.send(f'Dyvor Records...')
+    if message.content == 'music':
+        await message.channel.send(f'I like music aswell, I recommend you lookup Andreas Von Dyvor.')
     await bot.process_commands(message)
 
 

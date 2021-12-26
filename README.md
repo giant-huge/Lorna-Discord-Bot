@@ -1,2 +1,2 @@
-# hannahbot
-# it fucking works mate - hannah "hz"
+# assistantbot
+# it fucking works mate - ruble

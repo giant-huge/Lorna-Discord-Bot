@@ -32,7 +32,7 @@ def find_by_name(obj, name):
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name="^help, type assistant"))
-    print('Assistant v6.30113 has returned from her lunch break.')
+    print('ASSISTANT 7 has arrived...')
 
 
 @bot.event
@@ -46,19 +46,19 @@ async def on_message(message):
 @bot.event
 async def on_message(message):
     if message.content == 'assistant':
-        await message.channel.send(f'Hello! Welcome to Dyvor Records. What you do need ^help with?')
+        await message.channel.send(f'Hello! Welcome to Ruble House. What you do need ^help with?')
     if message.content == 'god':
-        await message.channel.send(f'**I LOVE DYVOR! HE LITERALLY CREATED ME.**')
+        await message.channel.send(f'**Very Political**')
     if message.content == 'f':
-        await message.channel.send(f'Fuck You.')
+        await message.channel.send(f'Rest in Peace...')
     if message.content == 'sex':
-        await message.channel.send(f'No thank you.')
+        await message.channel.send(f'Dm me.')
     if message.content == 'drugs':
-        await message.channel.send(f'Sorry no.')
+        await message.channel.send(f'When, where, and why.')
     if message.content == 'minecraft':
         await message.channel.send(f'Are you 5?')
     if message.content == 'latest':
-        await message.channel.send(f'https://ffm.to/avd-benefits-ep')
+        await message.channel.send(f'Looks like Ruble has not published any music yet.')
     if message.content == 'gay':
         await message.channel.send(f'No you.')
     if message.content == 'yo':
@@ -82,24 +82,26 @@ async def on_message(message):
     if message.content == 'Heya':
         await message.channel.send(f':wink:')
     if message.content == 'cringe':
-        await message.channel.send(f'Very much so.')
+        await message.channel.send(f'Visible cringe.')
     if message.content == 'trash':
         await message.channel.send(f':fire:')
     if message.content == 'dyvor':
-        await message.channel.send(f'Dyvor Records...')
+        await message.channel.send(f'How the fuck do you know about that... who are you?')
+    if message.content == 'loerna':
+        await message.channel.send(f'Probably doing something high speed, not speed tho, heavens she would never!')
     if message.content == 'music':
-        await message.channel.send(f'I like music aswell, I recommend you lookup Andreas Von Dyvor.')
+        await message.channel.send(f'I like music aswell, I recommend you lookup AVAAVA when they drop an EP soon...')
     await bot.process_commands(message)
 
 
 @bot.command()
 async def ride(ctx):
-    await ctx.send("It's time to ride... you're not recording, right?")
+    await ctx.send("Daddy?")
 
 
 @bot.command()
 async def emoji(ctx, name):
-    await ctx.send(str(find_by_name(find_by_name(bot.guilds, 'Dyvor Records').emojis, name)))
+    await ctx.send(str(find_by_name(find_by_name(bot.guilds, 'Ruble House').emojis, name)))
 
 
 @bot.command()
@@ -107,98 +109,10 @@ async def ping(ctx):
     await ctx.send(f'Assistant Bot Latency is currently: {bot.latency}')
 
 
-@bot.command()
-async def lol(ctx):
-    await ctx.send('lmao?')
-
-
-@bot.command()
-async def love(ctx):
-    await ctx.send('Please stop.')
-
-
-@bot.command()
-async def email(ctx):
-    await ctx.send('Andreas Von Dyvor: dyvormusic@gmail.com')
-    await ctx.send('Dyvor Records: dyvorrecords@gmail.com')
-
-
-@bot.command()
-async def youtube(ctx):
-    await ctx.send('Andreas Von Dyvor: https://www.youtube.com/channel/UCKnmmN818_bESzsc5xFGXdA')
-    await ctx.send('Dyvor Records: https://www.youtube.com/channel/UCpppRmlQOrG9S6arbQy8RAg')
-
 
 @bot.command()
 async def contactbot(ctx):
     await ctx.send('You cannot contact me, I am not real.')
-
-
-@bot.command()
-async def instagram(ctx):
-    await ctx.send('Andreas Von Dyvor: https://www.instagram.com/andreasvondyvor')
-    await ctx.send('Dyvor Records: https://www.instagram.dyvorrecords')
-
-
-@bot.command()
-async def artists(ctx):
-    await ctx.send('In chronological order.')
-    await ctx.send('---------------------------------------------------------')
-    await ctx.send('Andreas Von Dyvor')
-    await ctx.send('JAAMS (previously Jay Alex)')
-    await ctx.send('Karen Vegas')
-    await ctx.send('Jausla')
-
-
-@bot.command()
-async def labelinfo(ctx):
-    await ctx.send('Dyvor Records, a label founded with the goal to release top quality music from emerging artists,')
-    await ctx.send('all over the world.')
-    await ctx.send('To date all of the labels releases have over 3 Million streams and over 1 Million downloads.')
-    await ctx.send('To contact the label and Dyvor himself, do ^email')
-
-
-@bot.command()
-async def andreasvondyvor(ctx):
-    await ctx.send('The founder and current CEO of Dyvor Records')
-    await ctx.send('---------------------------------------------------------')
-    await ctx.send('**Current Discography:**')
-    await ctx.send('SPACE (05-17-2019) [Single]')
-    await ctx.send('Something (In It) (10-23-2019) [Single]')
-    await ctx.send('WTFISHOUSEMUSIC (01-23-2020) [Single]')
-    await ctx.send('Papa Putin feat. Andreas Von Dyvor (04-07-2020) [Single]')
-    await ctx.send('Benefits (04-17-2020) [EP, 5 Tracks]')
-
-
-@bot.command()
-async def jaams(ctx):
-    await ctx.send('JAAMS is a duo created by American label exec Andreas Von Dyvor and,')
-    await ctx.send('Portuguese producer Jay Alex. They have known eachother since 2017.')
-    await ctx.send('---------------------------------------------------------')
-    await ctx.send('**Current Discography:**')
-    await ctx.send('Papa Putin feat. Andreas Von Dyvor (04-07-2020) [Single]')
-
-
-@bot.command()
-async def karenvegas(ctx):
-    await ctx.send('Karen Vegas, while her true identity is a closely guarded secret,')
-    await ctx.send('she is from the EU and she is speculated to be twenty five years of age.')
-    await ctx.send('---------------------------------------------------------')
-    await ctx.send('**Current Discography:**')
-    await ctx.send('Promises (?) [Single, to be re-released late Q1 2021]')
-
-
-@bot.command()
-async def jausla(ctx):
-    await ctx.send('Jausla. Jausla?')
-    await ctx.send('---------------------------------------------------------')
-    await ctx.send('**Current Discography:**')
-    await ctx.send('Not available.')
-
-
-@bot.command()
-async def latest(ctx):
-    await ctx.send('https://ffm.to/avd-benefits-ep')
 
 
 @bot.command()
@@ -210,14 +124,8 @@ async def rave(ctx):
 
 
 @bot.command()
-async def soundcloud(ctx):
-    await ctx.send('Andreas Von Dyvor: https://soundcloud.com/dyvor-music')
-    await ctx.send('Dyvor Records: https://soundcloud.com/dyvor-records')
-
-
-@bot.command()
 async def invite(ctx):
-    await ctx.send('https://discord.gg/asPGWf3PH3')
+    await ctx.send('https://discord.gg/9YTsZFdtWJ')
 
 
 @bot.command()
@@ -237,7 +145,7 @@ async def emergency(ctx):
 
 @bot.command()
 async def serverinfo(ctx):
-    await ctx.send('The official discord server of Dyvor Records.')
+    await ctx.send('The official discord server of Ruble House.')
 
 
 @bot.command()

@@ -1,2 +1,2 @@
 # assistantbot
-# it fucking works mate - ruble
+# Giant Huge official Discord Bot = Nora.

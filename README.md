@@ -1,2 +1,2 @@
-# assistantbot
-# Giant Huge official Discord Bot = Nora.
+# Lorna Bot
+# Giant Huge Official Discord Bot
